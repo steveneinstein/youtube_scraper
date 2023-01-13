@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    #grad{background: linear-gradient(69.5deg, rgba(189, 73, 255, 0.99) 18.6%, rgb(254, 76, 227) 85.9%);}
+    #box{box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;}
+    table {background: white;
+  border-radius: 1px;}
+  table th {background: white;}
+  h1 {
+  font-size: 20px;
+  background: -webkit-linear-gradient(#0f0c29, #302b63);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="./static/css/styles.css" type="text/css"  media="screen,projection"/>
+    <title>Channel_statistics</title>
+</head >
+<body  id="grad" >
+    <!-- Image and name container. Change to your picture here. -->
+      <div   >
+      <img src="./static/images/ineuron-logo.png" alt = "ineuron-logo" width= "300" height="100" align = "right" >
+      </div>
+       <div>
+           <h1 align="left" style="color:powderblue;"><strong>Project:Youtube scrapping by Einstein steven Dsouza</strong></h1>
+                <h1 align="left" ><strong>contact: 9901716742  </strong></h1>
+                <h1 align="left" ><strong>email: einsteindsouza008@gmail.com  </strong></h1></div>
+
+<pre>
+
+</pre>
+    <table id="box"  width="100%" border="2">
+
+        <tr   >
+            {% for headers in headings %}
+            <th style="text-align:center " >{{  headers  }}</th>
+            {% endfor %}
+        </tr>
+
+        <tr  align="center">
+            {% for data in channel_stat %}
+            <td  style="text-align:center " bgcolor="white" >{{ data }}</td>
+            {% endfor %}
+        </tr>
+
+    </table>
+<pre>   </pre>
+    <table id="box"  width="70%" align="center" >
+
+        <tr >
+            {% for vheaders in vheading %}
+            <th  style="text-align:center " >{{  vheaders  }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in vdata %}
+        <tr >
+            {% for cell in row %}
+            <td style="text-align:left" align="left">{{ cell|safe }}</td> <!-- safehelps in skip escaping-->
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+        <tr class="table__header">
+            {% for lheaders in link_headings %}
+            <th style="text-align:center " >{{  lheaders  }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in links %}
+        <tr >
+            {% for cell in row %}
+            <td style="text-align:center "><a><img src = "{{'%s'%cell }}" alt = "thumbnail" width= "200" height="150" align = "left"/></a> </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
+

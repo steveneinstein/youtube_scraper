@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    #grad{background: linear-gradient(#f5f7fa, #c3cfe2);}
+    .label {
+  color: red;
+  padding: 2px;
+  font-family: Arial;
+}
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <link rel ="stylesheet" type="text/css" href= ".\static\css\css3.css">
+    <title>Youtube scraper</title>
+</head>
+<body id="grad">
+<!-- Image and name container. Change to your picture here. -->
+      <div align="center">
+      <img src="./static/images/ytlogo.png" class="w3-margin" alt="Person" max-width="150%" height="150px" style="border-radius: 50%;">
+          <img src="./static/images/ineuron-logo.png" class="w3-margin" alt="Person" max-width="150%" height="150px" style="border-radius: 50%;">
+      <div align="center">
+
+
+       <div class="w3-container w3-margin-bottom">
+       <h2 align="center"><strong>Project youtube scrapping by Einstein steven Dsouza</strong></h2>
+       <p class="w3-margin">Enter youtube channel link to get channel details,video details,video download link and its comments! </p>
+       </div>
+<form class ='grid' action="/result2" method = "POST">
+    <center>
+
+    </center>
+    <center><label for = "Username" >Enter the youtube page URL : </label></center>
+    <center><input type="text" name="username" id="username" size="100"STYLE="color:#383838; font-family: Verdana; border: 1px solid #383838; font-size: 12px; background-color:#D8D8D8;"></center>
+    <pre></pre>
+    <span class="label warning" style="textcolor:red">Warning: You have not entered proper url!</span>
+    <label for = "ENTER_VIDEOCOUNT" style = "font-size: 1.2em" id = "ENTER_VIDEOCOUNT">
+                Number of Videos to load:
+        </label>
+
+    <center><input value="10" name = "videoCountRequest" id = "videoCountRequest" type = "number" min = "1" max = "50"/></center>
+
+    <center><input type="submit" class="file_submit"></center>
+</form>
+</body>
+</html>
+
+
+
+
