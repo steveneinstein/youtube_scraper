@@ -6,9 +6,12 @@ import requests
 import re
 import json
 from urllib.request import urlopen as urReq
-from flask import Flask, render_template, request, jsonify  #obtains data from html form
-api_key='AIzaSyAJqn8KTeCW6VDFzOGAZlTBHWa1xT0EglI'
-channel_id = "UCrOXp44bAchyTyH-j4HTRdA"
+from flask import Flask, render_template, request  #obtains data from html form
+import os
+from dotenv import load_dotenv
+load_dotenv()
+api_key=os.getenv("api")
+
 youtube=build('youtube','v3',developerKey=api_key)
 from functions import get_comments,download_video
 

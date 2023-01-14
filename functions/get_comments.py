@@ -1,7 +1,9 @@
 from googleapiclient.discovery import build
+import os
+from dotenv import load_dotenv
+load_dotenv()
+api_key=os.getenv("api")
 
-api_key = 'AIzaSyAJqn8KTeCW6VDFzOGAZlTBHWa1xT0EglI'
-channel_id = "UCrOXp44bAchyTyH-j4HTRdA"
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 
