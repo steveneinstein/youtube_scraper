@@ -7,8 +7,7 @@ import re
 import json
 from urllib.request import urlopen as urReq
 from flask import Flask, render_template, request, jsonify  #obtains data from html form
-api_key='AIzaSyAJqn8KTeCW6VDFzOGAZlTBHWa1xT0EglI'
-channel_id = "UCrOXp44bAchyTyH-j4HTRdA"
+
 youtube=build('youtube','v3',developerKey=api_key)
 from functions import get_comments,download_video
 
